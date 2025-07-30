@@ -10,7 +10,7 @@
               <h3 class="card-title h5">{{ post.title }}</h3>
               <p class="text-muted small">{{ formatDate(post.date) }}</p>
               <p class="card-text">{{ post.excerpt }}</p>
-              <a href="#" class="btn btn-sm btn-primary">Read More</a>
+              <a href="#" class="btn btn-primary">Read More</a>
             </div>
           </article>
         </div>

@@ -49,12 +49,19 @@ const externalLinks = ref<ExternalLink[]>([
 }
 
 .list-group-item {
-  background-color: var(--light-forest);
+  background-color: var(--accent-green);
   border-color: var(--accent-green);
-  color: var(--text-primary);
+  color: var(--forest-green);
+  font-weight: 600;
+  padding: 1rem 1.5rem;
+  margin-bottom: 0.75rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
 }
 
 .list-group-item:hover {
-  background-color: var(--accent-green);
+  background-color: var(--text-secondary);
+  border-color: var(--text-secondary);
+  transform: translateY(-2px);
 }
 </style>
