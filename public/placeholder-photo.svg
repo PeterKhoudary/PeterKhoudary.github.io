@@ -1,0 +1,6 @@
+<svg width="300" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="300" fill="#1a2f1a"/>
+  <circle cx="150" cy="120" r="40" fill="#2d5016"/>
+  <path d="M 150 170 Q 100 200 100 250 L 200 250 Q 200 200 150 170" fill="#2d5016"/>
+  <text x="150" y="280" text-anchor="middle" fill="#ffffff" font-family="Arial" font-size="14">Your Photo Here</text>
+</svg>

@@ -1,0 +1,111 @@
+/* Import Bootstrap */
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+/* Custom Properties */
+:root {
+  --forest-green: #0d1f0d;
+  --dark-forest: #0a1a0a;
+  --light-forest: #1a2f1a;
+  --text-primary: #ffffff;
+  --text-secondary: #e0e0e0;
+  --accent-green: #2d5016;
+}
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background-color: var(--forest-green) !important;
+  min-height: 100vh;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.75rem; }
+
+p {
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+/* Links */
+a {
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+a:hover {
+  color: var(--text-primary);
+  opacity: 0.8;
+}
+
+/* Navigation */
+.navbar {
+  background-color: var(--dark-forest) !important;
+  border-bottom: 1px solid var(--light-forest);
+  padding: 1rem 0;
+}
+
+.navbar-brand, 
+.nav-link {
+  color: var(--text-primary) !important;
+}
+
+.nav-link:hover {
+  opacity: 0.8;
+}
+
+.nav-link.active {
+  border-bottom: 2px solid var(--text-primary);
+}
+
+/* Containers */
+.container {
+  max-width: 1200px;
+}
+
+/* Cards */
+.card {
+  background-color: var(--light-forest);
+  border: 1px solid var(--accent-green);
+  color: var(--text-primary);
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--accent-green);
+  border-color: var(--accent-green);
+  color: var(--text-primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--light-forest);
+  border-color: var(--light-forest);
+}
+
+/* Utility Classes */
+.text-muted {
+  color: var(--text-secondary) !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
+  h3 { font-size: 1.5rem; }
+}
