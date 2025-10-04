@@ -13,17 +13,18 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '24' # Or your preferred Node.js version
+            node-version: 'lts/*'
+            check-latest: true
 
       - name: Install dependencies
-        run: npm install # Or yarn install if you use Yarn
+        run: npm install
 
       - name: Build Vue app
-        run: npm run build # Or yarn build
+        run: npm run build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist # Or your build output directory
-          publish_branch: gh-pages # The branch to publish to
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            publish_dir: ./dist
+            publish_branch: gh-pages
