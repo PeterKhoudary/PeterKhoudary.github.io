@@ -1,16 +1,29 @@
-name: Build Vue
+name: Build and deploy vue app
 
 on: [push]
 
 jobs:
-  build_vue:
+  build-and-deploy:
     runs-on: ubuntu-latest
-    name: Build Vue
+
     steps:
-    - uses: actions/checkout@v2
-    - id: Build-Vue
-      uses: xRealNeon/VuePagesAction@1.0.1
-      with:
-        username: 'PeterKhoudary'
-        reponame: 'PeterKhoudary.github.io'
-        token: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchanged
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24' # Or your preferred Node.js version
+
+      - name: Install dependencies
+        run: npm install # Or yarn install if you use Yarn
+
+      - name: Build Vue app
+        run: npm run build # Or yarn build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist # Or your build output directory
+          publish_branch: gh-pages # The branch to publish to
