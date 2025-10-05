@@ -1,10 +1,10 @@
 <template>
   <div class="imgWrapper">
-    <img src="../../assets/mountains.jpg" class="mainImage"/>
+    <img src="../../assets/mountains.jpg" class="mainImage" />
   </div>
 </template>
 
-<script setup lang="ts"/>
+<script setup lang="ts" />
 
 <style scoped>
 .imgWrapper {
@@ -22,5 +22,4 @@ img {
   width: 100%;
   height: auto;
 }
-
 </style>

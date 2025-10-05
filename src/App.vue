@@ -2,9 +2,9 @@
   <div class="contentWrapper">
     <div class="mainContent">
       <div class="headerContent">
-        <RouterLink to='/' class="navTab">Peter Khoudary</RouterLink>
+        <RouterLink to="/" class="navTab">Peter Khoudary</RouterLink>
         <div class="sideLinks">
-          <RouterLink to='/writing' class="navTab">Writing</RouterLink>
+          <RouterLink to="/writing" class="navTab">Writing</RouterLink>
           <a href="https://www.youtube.com/@peterkhoudary" target="_blank" class="navTab">YT</a>
         </div>
       </div>
@@ -16,8 +16,7 @@
 </template>
 
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router';
-
+import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <style scoped>
@@ -49,12 +48,10 @@ import { RouterLink, RouterView } from 'vue-router';
   padding: min(1vh, 1vw) 0rem;
 }
 
-
 .sideLinks {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   gap: min(5vh, 5vw);
 }
-
 </style>
