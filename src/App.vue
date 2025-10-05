@@ -46,7 +46,7 @@ import { RouterLink, RouterView } from 'vue-router';
 .navTab {
   font-size: min(4vh, 4vw);
   font-weight: 600;
-  padding: min(2vh, 2vw) 0rem;
+  padding: min(1vh, 1vw) 0rem;
 }
 
 
@@ -54,7 +54,7 @@ import { RouterLink, RouterView } from 'vue-router';
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  gap: min(2vh, 2vw);
+  gap: min(5vh, 5vw);
 }
 
 </style>
