@@ -40,7 +40,7 @@ import { RouterLink, RouterView } from 'vue-router'
   position: sticky;
   top: 0;
   background-color: antiquewhite;
-  padding: min(1vh, 1vw) 0rem;
+  padding: min(1vh, 1vw) 0rem min(2vh, 2vw);
 }
 
 .navTab {
