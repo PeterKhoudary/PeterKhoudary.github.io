@@ -30,7 +30,7 @@ import { RouterLink, RouterView } from 'vue-router'
 .mainContent {
   display: flex;
   flex-direction: column;
-  width: 65%;
+  width: 60vw;
 }
 
 .headerContent {
@@ -40,18 +40,18 @@ import { RouterLink, RouterView } from 'vue-router'
   position: sticky;
   top: 0;
   background-color: antiquewhite;
+  padding: min(1vh, 1vw) 0rem;
 }
 
 .navTab {
   font-size: min(4vh, 4vw);
   font-weight: 600;
-  padding: min(1vh, 1vw) 0rem;
 }
 
 .sideLinks {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  gap: min(5vh, 5vw);
+  gap: min(4vh, 4vw);
 }
 </style>
