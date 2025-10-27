@@ -13,13 +13,6 @@
 }
 
 .mainImage {
-  border-style: solid;
-  border-width: 4px;
-  border-color: black;
-}
-
-img {
-  width: 100%;
-  height: auto;
+  border: 4px solid black;
 }
 </style>
