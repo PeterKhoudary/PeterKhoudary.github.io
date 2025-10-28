@@ -17,8 +17,10 @@ a:hover {
   color: orangered;
 }
 
+p,
+li,
 .text {
-  font-size: clamp(1.125rem, 4vw, 1.75rem);
+  font-size: clamp(1.125rem, 4vw, 1.5rem);
 }
 
 img,
