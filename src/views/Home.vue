@@ -2,7 +2,6 @@
   <div class="imgWrapper">
     <img src="/assets/mountains.jpg" class="mainImage" />
   </div>
-  <RouterView />
 </template>
 
 <script setup lang="ts" />

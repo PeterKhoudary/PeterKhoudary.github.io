@@ -18,7 +18,6 @@ const posts: post[] = [
       <span class="date">{{ post.createdAt }}</span>
     </RouterLink>
   </div>
-  <RouterView />
 </template>
 
 <style scoped>
