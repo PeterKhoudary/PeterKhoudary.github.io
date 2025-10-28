@@ -5,9 +5,17 @@ import Writing from '@/views/Writing.vue'
 import BlogPost from '@/views/BlogPost.vue'
 
 const routes = [
-  { path: '/', component: Home },
-  { path: '/writing', component: Writing },
-  { path: '/writing/:slug', component: BlogPost },
+  {
+    path: '/',
+    component: Home,
+    children: [
+      {
+        path: 'writing',
+        component: Writing,
+        children: [{ path: ':slug', component: BlogPost }],
+      },
+    ],
+  },
 ]
 
 export const router = createRouter({
