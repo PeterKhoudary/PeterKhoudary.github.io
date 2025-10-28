@@ -16,8 +16,8 @@ And here's a block equation:
 
 $$
 \begin{align*}
-  \sum_{v \in V} deg(v) &= 2|E| \tag{What's the name of this lemma Bruno?} \\
-  &\leq n(n - 1) \tag{Assuming no multi or self edges}
+  \sum_{v \in V} deg(v) &= 2|E| \\
+  &\leq n(n - 1)
 \end{align*}
 $$
 
