@@ -1,6 +1,6 @@
 <template>
   <div class="imgWrapper">
-    <img src="../../assets/mountains.jpg" class="mainImage" />
+    <img src="/assets/mountains.jpg" class="mainImage" />
   </div>
 </template>
 
