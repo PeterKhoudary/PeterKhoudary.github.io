@@ -5,7 +5,7 @@
         <RouterLink to="/" class="navTab">Peter Khoudary</RouterLink>
         <div class="sideLinks">
           <RouterLink to="/writing" class="navTab">Writing</RouterLink>
-          <a href="https://www.youtube.com/@peterkhoudary" target="_blank" class="navTab">YT</a>
+          <!-- <a href="https://www.youtube.com/@peterkhoudary" target="_blank" class="navTab">YT</a> -->
         </div>
       </div>
       <div>
