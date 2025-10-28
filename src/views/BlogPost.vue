@@ -66,12 +66,21 @@ onMounted(async () => {
 }
 
 :deep(code) {
-  font-size: clamp(0.875rem, 2vw, 1rem);
+  font-size: clamp(1rem, 4vw, 1.25rem);
   font-family: 'Courier New', monospace;
 }
 
 :deep(pre) {
   margin: 1.5rem 0;
   overflow-x: auto;
+}
+
+:deep(.katex-display) {
+  overflow-x: auto;
+  padding: 0.5rem 0;
+}
+
+:deep(.katex) {
+  font-size: clamp(1xrem, 4vw, 1.25rem);
 }
 </style>
