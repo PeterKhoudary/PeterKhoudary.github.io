@@ -32,7 +32,6 @@ onMounted(async () => {
     const response = await fetch(`/assets/posts/${slug}.md`)
     if (!response.ok) throw new Error('Post not found')
     content.value = await response.text()
-    console.log(htmlOutput.value)
   } catch (error) {
     content.value = `# Error\n\nPost not found: ${error}`
   }

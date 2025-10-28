@@ -2,6 +2,7 @@
 import type { post } from '@/utils/types'
 
 const posts: post[] = [
+  // { slug: 'long-post', title: 'The Infinite Scroll of Consciousness', createdAt: new Date('2025-10-28T14:30') },
   { slug: 'intro', title: 'Introduction', createdAt: new Date('2025-10-27T10:27') },
 ]
 </script>
