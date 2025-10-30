@@ -1,3 +1,12 @@
+<template>
+  <div>
+    <div class="post-title" v-if="currentPost">
+      <h1>{{ currentPost.title }}</h1>
+    </div>
+    <div class="blog-post" v-html="htmlOutput" />
+  </div>
+</template>
+
 <script setup lang="ts">
 import MarkdownIt from 'markdown-it'
 import { katex } from '@mdit/plugin-katex'
@@ -52,15 +61,6 @@ onMounted(async () => {
   }
 })
 </script>
-
-<template>
-  <div>
-    <div class="post-title" v-if="currentPost">
-      <h1>{{ currentPost.title }}</h1>
-    </div>
-    <div class="blog-post" v-html="htmlOutput" />
-  </div>
-</template>
 
 <style scoped>
 .post-title {
