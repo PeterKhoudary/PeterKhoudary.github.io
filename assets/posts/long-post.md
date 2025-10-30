@@ -1,14 +1,12 @@
-# The Infinite Scroll of Consciousness
-
 This is a really long post. Like, really long. The kind of long that makes you question why you're still reading. But you are, aren't you? You're still here. That's the thing about long text - it has a way of pulling you in, even when there's nothing particularly interesting happening.
 
-## The Beginning of Something
+# The Beginning of Something
 
 Let's talk about the nature of length. Not physical length, but textual length. The kind that stretches on and on, filling space, consuming time, demanding attention. It's a curious thing, really. We live in an age where everyone claims to have the attention span of a goldfish, yet here we are, still reading.
 
 Maybe it's the promise of something meaningful at the end. Or maybe it's just the momentum of having started. Either way, we continue. The words keep coming, and we keep reading them, one after another, in an endless parade of letters forming words forming sentences forming paragraphs.
 
-## The Middle Section
+# The Middle Section
 
 This is where things get really interesting. Or do they? That's the question, isn't it? When you're in the middle of something long, it's hard to tell if you're experiencing something profound or just experiencing length for length's sake. The words blur together. The paragraphs start to feel the same.
 
@@ -16,7 +14,7 @@ But let's keep going. Let's talk about nothing in particular. Let's discuss the 
 
 This text, on the other hand, is pretending. It's masquerading as meaningful while being deliberately, intentionally long. It's length without substance, form without function, words without wisdom. And yet, you're still reading. That's either very dedicated of you or very questionable. I haven't decided which.
 
-## Another Section Because Why Not
+# Another Section Because Why Not
 
 Have you ever noticed how section headers make text seem more organized, even when the text itself is completely unorganized? It's like putting dividers in a junk drawer. The junk is still junk, but now it's categorized junk. This is categorized rambling.
 
@@ -44,7 +42,7 @@ And what will you find at the end? Probably nothing. Probably just more words th
 
 Consider the ocean. Now that's long. Horizontally long. Vast expanses of water stretching to the horizon and beyond. This text is like that, except vertical. A vertical ocean of words. An ocean you scroll through rather than sail across. The metaphor is getting away from me, but that's fine. Everything gets away from us eventually.
 
-## The Penultimate Section
+# The Penultimate Section
 
 We're nearing the end now. Can you feel it? The wind is changing. The tone is shifting. Or maybe it isn't. Maybe I'm just saying that to create a false sense of progression. Maybe everything has been exactly the same from start to finish.
 
@@ -52,13 +50,13 @@ That's the thing about long text. It creates its own reality. Its own sense of t
 
 Is that profound? No. Is it true? Absolutely. Every moment you spend reading this is a moment you're not doing something else. You could be outside. You could be talking to someone. You could be doing literally anything else. But you're here. With me. In this increasingly long post.
 
-## The Actual End
+# The Actual End
 
 Well, we made it. Together. You and I, reader and writer, have journeyed through this unnecessarily long piece of text. Was it worth it? That's not for me to say. That's for you to decide, alone, in the quiet moments after you finish reading this sentence.
 
 What have we learned? Probably nothing. What have we gained? Definitely nothing. But we've experienced length. We've experienced the slow accumulation of words into something that could, charitably, be called a post. And sometimes, that's enough.
 
-### Key Takeaways (if we're being generous):
+## Key Takeaways (if we're being generous):
 
 - Long things are long
 - You read this whole thing
