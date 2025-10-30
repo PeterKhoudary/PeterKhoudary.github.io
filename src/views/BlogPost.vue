@@ -6,9 +6,24 @@ import 'katex/dist/katex.min.css'
 import 'highlight.js/styles/github-dark.min.css'
 import { computed, ref, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
+import type { post } from '@/utils/types'
 
 const route = useRoute()
 const content = ref('')
+
+const posts: post[] = [
+  {
+    slug: 'long-post',
+    title: 'The Infinite Scroll of Consciousness',
+    createdAt: new Date('2025-10-28T14:30'),
+  },
+  { slug: 'intro', title: 'Introduction', createdAt: new Date('2025-10-27T10:27') },
+]
+
+const currentPost = computed(() => {
+  const slug = route.params.slug as string
+  return posts.find((p) => p.slug === slug)
+})
 
 const md = new MarkdownIt({
   highlight: function (str, lang): string {
@@ -39,20 +54,29 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="blog-post" v-html="htmlOutput" />
+  <div>
+    <div class="post-title" v-if="currentPost">
+      <h1>{{ currentPost.title }}</h1>
+    </div>
+    <div class="blog-post" v-html="htmlOutput" />
+  </div>
 </template>
 
 <style scoped>
+.post-title {
+  border-bottom: 2px solid black;
+}
+
 :deep(h1) {
   font-size: clamp(1rem, 4vw, 2rem);
 }
 
 :deep(h2) {
-  font-size: clamp(0.8rem, 4vw, 1.75rem);
+  font-size: clamp(0.75rem, 3vw, 1.5rem);
 }
 
 :deep(h3) {
-  font-size: clamp(0.7rem, 3vw, 1.5rem);
+  font-size: clamp(0.585rem, 2.34vw, 1.17rem);
 }
 
 :deep(p),

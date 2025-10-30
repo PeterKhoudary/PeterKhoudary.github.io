@@ -30,7 +30,7 @@ import { RouterLink, RouterView } from 'vue-router'
 .mainContent {
   display: flex;
   flex-direction: column;
-  width: clamp(300px, 65%, 12000px);
+  width: clamp(300px, 70%, 12000px);
   padding: 0 1rem;
 }
 
@@ -38,7 +38,6 @@ import { RouterLink, RouterView } from 'vue-router'
   display: flex;
   justify-content: space-between;
   font-family: 'Playfair Display', 'Times New Roman';
-  position: sticky;
   top: 0;
   background-color: antiquewhite;
   padding: clamp(0.5rem, 1vw, 1rem) 0;

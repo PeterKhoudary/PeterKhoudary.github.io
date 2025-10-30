@@ -1,14 +1,12 @@
-# Introduction
-
 Welcome to my blog! This is a test post to demonstrate markdown rendering with LaTeX support. This took way longer than I would ever admit.
 
-## Features
+# Features
 
 - **Markdown** formatting
 - Code blocks
 - Math equations
 
-## Example Math
+# Example Math
 
 Here's an inline equation: $69 \leq 420$
 
@@ -21,7 +19,7 @@ $$
 \end{align*}
 $$
 
-## Code Example
+# Code Example
 
 ```python
 def hello():
