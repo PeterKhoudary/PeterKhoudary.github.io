@@ -7,11 +7,7 @@
         <li
           v-for="heading in headings"
           :key="heading.id"
-          :class="[
-            'toc-item',
-            `toc-level-${heading.level}`,
-            { active: activeHeadingId === heading.id },
-          ]"
+          :class="['toc-item', `toc-level-${heading.level}`, { active: activeId === heading.id }]"
         >
           <a :href="`#${heading.id}`" @click.prevent="scrollToHeading(heading.id)">
             {{ heading.text }}
@@ -28,8 +24,9 @@ import { katex } from '@mdit/plugin-katex'
 import hljs from 'highlight.js'
 import 'katex/dist/katex.min.css'
 import 'highlight.js/styles/github-dark.min.css'
-import { computed, ref, onMounted, onUnmounted, nextTick } from 'vue'
+import { computed, ref, onMounted, nextTick } from 'vue'
 import { useRoute } from 'vue-router'
+import { useActiveScroll } from 'vue-use-active-scroll'
 import type { post } from '@/utils/types'
 
 interface Heading {
@@ -41,7 +38,16 @@ interface Heading {
 const route = useRoute()
 const content = ref('')
 const headings = ref<Heading[]>([])
-const activeHeadingId = ref<string>('')
+
+// Get heading IDs for vue-use-active-scroll
+const headingIds = computed(() => headings.value.map((h) => h.id))
+
+// Set up active scroll tracking
+const { setActive, activeId } = useActiveScroll(headingIds, {
+  jumpToFirst: true,
+  jumpToLast: true,
+  boundaryOffset: { toTop: 0.1, toBottom: 0.8 },
+})
 
 const posts: post[] = [
   {
@@ -104,49 +110,12 @@ function addIdsToHeadings() {
         el.id = heading.id
       }
     })
-
-    setupIntersectionObserver()
   })
 }
 
 function scrollToHeading(id: string) {
-  const element = document.getElementById(id)
-  if (element) {
-    activeHeadingId.value = id
-    element.scrollIntoView({ behavior: 'smooth' })
-  }
-}
-
-let observer: IntersectionObserver | null = null
-
-function setupIntersectionObserver() {
-  if (observer) {
-    observer.disconnect()
-  }
-
-  const headingElements = headings.value
-    .map((h) => document.getElementById(h.id))
-    .filter(Boolean) as HTMLElement[]
-
-  if (headingElements.length === 0) return
-
-  observer = new IntersectionObserver(
-    (entries) => {
-      const visibleEntries = entries.filter((entry) => entry.isIntersecting)
-      if (visibleEntries.length > 0) {
-        const topEntry = visibleEntries.reduce((prev, curr) =>
-          curr.boundingClientRect.top < prev.boundingClientRect.top ? curr : prev,
-        )
-        activeHeadingId.value = topEntry.target.id
-      }
-    },
-    {
-      rootMargin: '-10% 0px -80% 0px',
-      threshold: 0,
-    },
-  )
-
-  headingElements.forEach((el) => observer?.observe(el))
+  setActive(id) // Tell vue-use-active-scroll about the click
+  document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
 }
 
 onMounted(async () => {
@@ -159,12 +128,6 @@ onMounted(async () => {
     addIdsToHeadings()
   } catch (error) {
     content.value = `# Error\n\nPost not found: ${error}`
-  }
-})
-
-onUnmounted(() => {
-  if (observer) {
-    observer.disconnect()
   }
 })
 </script>
