@@ -20,8 +20,6 @@ import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-
 .contentWrapper {
   display: flex;
   justify-content: center;
@@ -37,7 +35,6 @@ import { RouterLink, RouterView } from 'vue-router'
 .headerContent {
   display: flex;
   justify-content: space-between;
-  font-family: 'Playfair Display', 'Times New Roman';
   top: 0;
   background-color: antiquewhite;
   padding: clamp(0.5rem, 1vw, 1rem) 0;

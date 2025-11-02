@@ -230,21 +230,11 @@ html {
 }
 
 :deep(code) {
-  font-size: clamp(1rem, 4vw, 1.25rem);
+  font-size: clamp(0.6rem, 3.5vw, 1.2rem);
   font-family: 'Courier New', monospace;
 }
 
-:deep(pre) {
-  margin: 1.5rem 0;
-  overflow-x: auto;
-}
-
-:deep(.katex-display) {
-  overflow-x: auto;
-  padding: 0.5rem 0;
-}
-
 :deep(.katex) {
-  font-size: clamp(1xrem, 4vw, 1.25rem);
+  font-size: clamp(0.6rem, 3.5vw, 1.2rem);
 }
 </style>
