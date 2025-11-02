@@ -209,15 +209,15 @@ html {
 }
 
 :deep(h1) {
-  font-size: clamp(1rem, 4vw, 2rem);
+  font-size: clamp(1.25rem, 4vw, 2.5rem);
 }
 
 :deep(h2) {
-  font-size: clamp(0.75rem, 3vw, 1.5rem);
+  font-size: clamp(1rem, 4vw, 2rem);
 }
 
 :deep(h3) {
-  font-size: clamp(0.585rem, 2.34vw, 1.17rem);
+  font-size: clamp(0.75rem, 3vw, 1.5rem);
 }
 
 :deep(p),
