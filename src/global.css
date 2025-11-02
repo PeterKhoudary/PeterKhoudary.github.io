@@ -39,7 +39,7 @@ h3 {
 
 p,
 li {
-  font-size: clamp(0.6rem, 3.5vw, 1.35rem);
+  font-size: clamp(0.75rem, 3.5vw, 1.35rem);
 }
 
 ul {
@@ -47,10 +47,10 @@ ul {
 }
 
 code {
-  font-size: clamp(0.6rem, 3.5vw, 1.2rem);
+  font-size: clamp(0.75rem, 3.5vw, 1.2rem);
   font-family: 'Courier New', monospace;
 }
 
 .katex {
-  font-size: clamp(0.6rem, 3.5vw, 1.2rem);
+  font-size: clamp(0.75rem, 3.5vw, 1.2rem);
 }
