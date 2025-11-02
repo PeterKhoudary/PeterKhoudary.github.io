@@ -213,16 +213,16 @@ html {
 }
 
 :deep(h2) {
-  font-size: clamp(1rem, 4vw, 2rem);
+  font-size: clamp(1rem, 3.8vw, 2rem);
 }
 
 :deep(h3) {
-  font-size: clamp(0.75rem, 3vw, 1.5rem);
+  font-size: clamp(0.75rem, 3.6vw, 1.5rem);
 }
 
 :deep(p),
 :deep(li) {
-  font-size: clamp(0.6rem, 4vw, 1.2rem);
+  font-size: clamp(0.6rem, 3.5vw, 1.2rem);
 }
 
 :deep(ul) {
