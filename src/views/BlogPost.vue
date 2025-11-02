@@ -207,34 +207,4 @@ html {
 .toc-level-3 {
   padding-left: 2rem;
 }
-
-:deep(h1) {
-  font-size: clamp(1.25rem, 4vw, 2.5rem);
-}
-
-:deep(h2) {
-  font-size: clamp(1rem, 3.8vw, 2rem);
-}
-
-:deep(h3) {
-  font-size: clamp(0.75rem, 3.6vw, 1.5rem);
-}
-
-:deep(p),
-:deep(li) {
-  font-size: clamp(0.6rem, 3.5vw, 1.2rem);
-}
-
-:deep(ul) {
-  margin-top: 0;
-}
-
-:deep(code) {
-  font-size: clamp(0.6rem, 3.5vw, 1.2rem);
-  font-family: 'Courier New', monospace;
-}
-
-:deep(.katex) {
-  font-size: clamp(0.6rem, 3.5vw, 1.2rem);
-}
 </style>
