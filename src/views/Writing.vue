@@ -19,16 +19,7 @@
 </template>
 
 <script setup lang="ts">
-import type { post } from '@/utils/types'
-
-const posts: post[] = [
-  {
-    slug: 'long-post',
-    title: 'The Infinite Scroll of Consciousness',
-    createdAt: new Date('2025-10-28'),
-  },
-  { slug: 'intro', title: 'Introduction', createdAt: new Date('2025-10-27') },
-]
+import { posts } from '@/utils/posts'
 </script>
 
 <style scoped>

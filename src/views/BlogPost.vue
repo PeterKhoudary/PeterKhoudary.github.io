@@ -27,7 +27,7 @@ import 'highlight.js/styles/github-dark.min.css'
 import { computed, ref, onMounted, nextTick } from 'vue'
 import { useRoute } from 'vue-router'
 import { useActiveScroll } from 'vue-use-active-scroll'
-import type { post } from '@/utils/types'
+import { posts } from '@/utils/posts'
 
 interface Heading {
   id: string
@@ -48,15 +48,6 @@ const { setActive, activeId } = useActiveScroll(headingIds, {
   jumpToLast: true,
   boundaryOffset: { toTop: 0.1, toBottom: 0.8 },
 })
-
-const posts: post[] = [
-  {
-    slug: 'long-post',
-    title: 'The Infinite Scroll of Consciousness',
-    createdAt: new Date('2025-10-28T14:30'),
-  },
-  { slug: 'intro', title: 'Introduction', createdAt: new Date('2025-10-27T10:27') },
-]
 
 const currentPost = computed(() => {
   const slug = route.params.slug as string
