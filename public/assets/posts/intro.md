@@ -1,29 +1,31 @@
-Welcome to my blog! This is a test post to demonstrate markdown rendering with LaTeX support. This took way longer than I would ever admit.
+---
+slug: intro
+title: Reader's Guide
+createdAt: 2025-11-24
+---
 
-# Features
+Welcome to my blog! I'm using this post to explain the origin of this page and what you can expect to see here.
 
-- **Markdown** formatting
-- Code blocks
-- Math equations
+# Why write?
+Over last summer, I've told a few friends about my plans to build this site. I pitch them a future where I start putting thoughts here, maybe make accompanying YouTube videos, and immortalize my thoughts online.
 
-# Example Math
+Upon hearing this, the first thing out of their mouths was always words of support and excitement. I've had others in my life tell propose this idea to me unprompted, and that group was delighted to hear my plans. Whenever one of these exchanges occurred, I'd try to take a moment to appreciate how supportive my friends are. But before I had time to reflect, there came the second thing out their mouth.
 
-Here's an inline equation: $69 \leq 420$
+*Why?*
 
-And here's a block equation:
+I never had a good answer. 
 
-$$
-\begin{align*}
-  \sum_{v \in V} deg(v) &= 2|E| \\
-  &\leq n(n - 1)
-\end{align*}
-$$
+My typical response was about 5 minutes of incoherent rambling, usually on the importance of self-actualization or how fried my attention span was. The conversation then devolved into the listeners proposing different hypotheses for my desire to write, while I responded with varying degrees of affirmation. Invariably, I walked away angry with the quality of my responses.
 
-# Code Example
+You'd be reasonable to think I'm making a big deal out of nothing. After all, personal writing is an art form, and most (reasonable) people understand that artists need not justify their existence. You might even say that I have the order wrong. I ought to express myself first, then let others come to their own conclusions about my work's significance.
 
-```python
-def hello():
-  print('Im like hey whats up hello')
-```
+There's a lot of merit to this thought process, and my preliminary deliberations had me take this stance. I pushed thinking about purpose to the side, and starting writing the code for this site. But the question started coming back to mind, and by the time I had finished a V1 of the blogging functionality, it was all I could think about. 
 
-That's it for now!
+I was dissatisfied with the above conclusion because, in the back of my mind, I knew it wasn't true. The truth is that I had countless reasons to write, and the process of enumerating all of my known reasons (let alone unconvering more) seemed impossible. My claim that "I'm writing for the sake of it" was me running away from my inability to wrangle my thoughts. It was clear to me that my reasons had a throughline, but clear description of said throughline evaded me.
+
+Long before I actually built this site, I had decided that the first post would be something of a reader's guide, to contextualize my other posts. As I sat down to write this, I realized I could no longer dodge the question. Some focus time across 3 different cafes in lower Manhattan led me to an answer I'm happy with. 
+
+I'm writing for my health.
+
+## Health is subjective.
+

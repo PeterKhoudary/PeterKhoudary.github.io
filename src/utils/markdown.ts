@@ -2,6 +2,7 @@ import MarkdownIt from 'markdown-it'
 import anchor from 'markdown-it-anchor'
 import { katex } from '@mdit/plugin-katex'
 import hljs from 'highlight.js'
+import fm from 'front-matter'
 
 export interface Heading {
   id: string
@@ -9,12 +10,21 @@ export interface Heading {
   level: number
 }
 
+export interface Frontmatter {
+  slug?: string
+  title?: string
+  createdAt?: string
+  updatedAt?: string
+}
+
 export interface ParseResult {
   html: string
   headings: Heading[]
+  frontmatter: Frontmatter
 }
 
 export function parseMarkdown(content: string): ParseResult {
+  const { attributes: frontmatter, body: markdownContent } = fm<Frontmatter>(content)
   const headings: Heading[] = []
   let headingIndex = 0
 
@@ -42,6 +52,6 @@ export function parseMarkdown(content: string): ParseResult {
       },
     })
 
-  const html = md.render(content)
-  return { html, headings }
+  const html = md.render(markdownContent)
+  return { html, headings, frontmatter }
 }

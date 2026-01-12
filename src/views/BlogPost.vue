@@ -24,7 +24,6 @@ import 'katex/dist/katex.min.css'
 import 'highlight.js/styles/github-dark.min.css'
 import { computed, ref, onMounted } from 'vue'
 import { useActiveScroll } from 'vue-use-active-scroll'
-import { posts } from '@/utils/posts'
 
 const props = defineProps<{ slug: string }>()
 const content = ref('')
@@ -45,7 +44,8 @@ const { setActive, activeId } = useActiveScroll(headingIds, {
 })
 
 const currentPost = computed(() => {
-  return posts.find((p) => p.slug === props.slug)
+  const title = parseResult.value?.frontmatter?.title
+  return title ? { title } : null
 })
 
 function scrollToHeading(id: string) {

@@ -19,7 +19,31 @@
 </template>
 
 <script setup lang="ts">
-import { posts } from '@/utils/posts'
+import fm from 'front-matter'
+import type { Frontmatter } from '@/utils/markdown'
+
+interface Post {
+  slug: string
+  title: string
+  createdAt: Date
+}
+
+const markdownFiles = import.meta.glob('/public/assets/posts/*.md', {
+  query: '?raw',
+  import: 'default',
+  eager: true,
+})
+
+const posts: Post[] = Object.values(markdownFiles)
+  .map((content) => {
+    const { attributes } = fm<Frontmatter>(content as string)
+    return {
+      slug: attributes.slug ?? '',
+      title: attributes.title ?? '',
+      createdAt: new Date(attributes.createdAt ?? ''),
+    }
+  })
+  .sort((a, b) => b.createdAt.getTime() - a.createdAt.getTime())
 </script>
 
 <style scoped>

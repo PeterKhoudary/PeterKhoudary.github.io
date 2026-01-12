@@ -1,3 +1,9 @@
+---
+slug: long-post
+title: The Infinite Scroll of Consciousness
+createdAt: 2025-10-28
+---
+
 This is a really long post. Like, really long. The kind of long that makes you question why you're still reading. But you are, aren't you? You're still here. That's the thing about long text - it has a way of pulling you in, even when there's nothing particularly interesting happening.
 
 # The Beginning of Something
