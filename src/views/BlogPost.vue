@@ -19,25 +19,20 @@
 </template>
 
 <script setup lang="ts">
-import MarkdownIt from 'markdown-it'
-import { katex } from '@mdit/plugin-katex'
-import hljs from 'highlight.js'
+import { parseMarkdown } from '@/utils/markdown'
 import 'katex/dist/katex.min.css'
 import 'highlight.js/styles/github-dark.min.css'
-import { computed, ref, onMounted, nextTick } from 'vue'
-import { useRoute } from 'vue-router'
+import { computed, ref, onMounted } from 'vue'
 import { useActiveScroll } from 'vue-use-active-scroll'
 import { posts } from '@/utils/posts'
 
-interface Heading {
-  id: string
-  text: string
-  level: number
-}
-
-const route = useRoute()
+const props = defineProps<{ slug: string }>()
 const content = ref('')
-const headings = ref<Heading[]>([])
+
+// Parse markdown and derive html + headings
+const parseResult = computed(() => (content.value ? parseMarkdown(content.value) : null))
+const htmlOutput = computed(() => parseResult.value?.html ?? '')
+const headings = computed(() => parseResult.value?.headings ?? [])
 
 // Get heading IDs for vue-use-active-scroll
 const headingIds = computed(() => headings.value.map((h) => h.id))
@@ -50,73 +45,19 @@ const { setActive, activeId } = useActiveScroll(headingIds, {
 })
 
 const currentPost = computed(() => {
-  const slug = route.params.slug as string
-  return posts.find((p) => p.slug === slug)
+  return posts.find((p) => p.slug === props.slug)
 })
 
-const md = new MarkdownIt({
-  highlight: function (str, lang): string {
-    if (lang && hljs.getLanguage(lang)) {
-      try {
-        return hljs.highlight(str, { language: lang, ignoreIllegals: true }).value
-      } catch {
-        // Ignore highlighting errors
-      }
-    }
-
-    return md.utils.escapeHtml(str)
-  },
-}).use(katex)
-
-const htmlOutput = computed(() => md.render(content.value))
-
-function extractHeadings() {
-  headings.value = []
-  const tokens = md.parse(content.value, {})
-  let headingIndex = 0
-
-  for (let i = 0; i < tokens.length; i++) {
-    const token = tokens[i]
-    if (token && token.type === 'heading_open') {
-      const level = parseInt(token.tag.substring(1))
-      const textToken = tokens[i + 1]
-      if (textToken && textToken.type === 'inline') {
-        const text = textToken.content
-        const id = `heading-${headingIndex++}`
-        headings.value.push({ id, text, level })
-      }
-    }
-  }
-}
-
-function addIdsToHeadings() {
-  nextTick(() => {
-    const blogPost = document.querySelector('.blog-post')
-    if (!blogPost) return
-
-    const headingElements = blogPost.querySelectorAll('h1, h2, h3')
-    headingElements.forEach((el, index) => {
-      const heading = headings.value[index]
-      if (heading) {
-        el.id = heading.id
-      }
-    })
-  })
-}
-
 function scrollToHeading(id: string) {
-  setActive(id) // Tell vue-use-active-scroll about the click
+  setActive(id)
   document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
 }
 
 onMounted(async () => {
-  const slug = route.params.slug as string
   try {
-    const response = await fetch(`/assets/posts/${slug}.md`)
+    const response = await fetch(`/assets/posts/${props.slug}.md`)
     if (!response.ok) throw new Error('Post not found')
     content.value = await response.text()
-    extractHeadings()
-    addIdsToHeadings()
   } catch (error) {
     content.value = `# Error\n\nPost not found: ${error}`
   }
