@@ -23,9 +23,9 @@ There's a lot of merit to this thought process, and my preliminary deliberations
 
 I was dissatisfied with the above conclusion because, in the back of my mind, I knew it wasn't true. The truth is that I had countless reasons to write, and the process of enumerating all of my known reasons (let alone unconvering more) seemed impossible. My claim that "I'm writing for the sake of it" was me running away from my inability to wrangle my thoughts. It was clear to me that my reasons had a throughline, but clear description of said throughline evaded me.
 
-Long before I actually built this site, I had decided that the first post would be something of a reader's guide, to contextualize my other posts. As I sat down to write this, I realized I could no longer dodge the question. Some focus time across 3 different cafes in lower Manhattan led me to an answer I'm happy with. 
-
-I'm writing for my health.
+Long before I actually built this site, I had decided that the first post would be something of a reader's guide, to contextualize my other posts. As I sat down to write this, I realized I could no longer dodge the question. Some focus time across 3 different cafes in lower Manhattan led me to an answer I'm happy with. I'm writing for my health.
+ 
+$$\sum_{v \in V}deg(v) = 2m$$
 
 ## Health is subjective.
 
