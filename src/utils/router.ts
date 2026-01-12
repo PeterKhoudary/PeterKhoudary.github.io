@@ -7,7 +7,7 @@ import BlogPost from '@/views/BlogPost.vue'
 const routes = [
   { path: '/', component: Home },
   { path: '/writing', component: Writing },
-  { path: '/writing/:slug', component: BlogPost },
+  { path: '/writing/:slug', component: BlogPost, props: true },
 ]
 
 export const router = createRouter({
