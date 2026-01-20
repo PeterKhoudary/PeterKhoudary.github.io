@@ -28,7 +28,8 @@ import { RouterLink, RouterView } from 'vue-router'
 .mainContent {
   display: flex;
   flex-direction: column;
-  width: clamp(300px, 70%, 12000px);
+  width: 100%;
+  max-width: 1000px;
   padding: 0 1rem;
 }
 
@@ -37,7 +38,7 @@ import { RouterLink, RouterView } from 'vue-router'
   justify-content: space-between;
   top: 0;
   background-color: antiquewhite;
-  padding: clamp(0.5rem, 1vw, 1rem) 0;
+  padding: 1rem 0;
 }
 
 .navTab {
@@ -45,16 +46,19 @@ import { RouterLink, RouterView } from 'vue-router'
   font-weight: 600;
 }
 
-@media (max-width: 600px) {
-  .navTab {
-    font-size: 1.25rem;
-  }
-}
-
 .sideLinks {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  gap: clamp(1rem, 4vw, 2.5rem);
+  gap: 2rem;
+}
+
+@media (max-width: 600px) {
+  .navTab {
+    font-size: 1.25rem;
+  }
+  .sideLinks {
+    gap: 1rem;
+  }
 }
 </style>
