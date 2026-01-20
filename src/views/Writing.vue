@@ -73,10 +73,19 @@ const posts: Post[] = Object.values(markdownFiles)
 }
 
 .post-title {
-  font-size: clamp(1.25rem, 4vw, 2rem);
+  font-size: 1.5rem;
 }
 
 .date {
-  font-size: clamp(0.875rem, 2vw, 1rem);
+  font-size: 1rem;
+}
+
+@media (max-width: 600px) {
+  .post-title {
+    font-size: 1.1rem;
+  }
+  .date {
+    font-size: 0.875rem;
+  }
 }
 </style>

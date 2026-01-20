@@ -41,8 +41,14 @@ import { RouterLink, RouterView } from 'vue-router'
 }
 
 .navTab {
-  font-size: clamp(1.25rem, 4vw, 2.5rem);
+  font-size: 2rem;
   font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .navTab {
+    font-size: 1.25rem;
+  }
 }
 
 .sideLinks {
