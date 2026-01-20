@@ -4,10 +4,10 @@ title: Reader's Guide
 createdAt: 2025-01-11
 ---
 
-Welcome to my blog! I'm using this post to explain the origin of this page and what you can expect to see here.
+Welcome to my blog! I'm using this post to explain the origins of this site and what you can expect to see here.
 
 # Why write?
-Over last summer, I've told a few friends about my plans to build this site. I pitch them a future where I start putting thoughts here, maybe make accompanying YouTube videos, and immortalize my thoughts online.
+Over this past summer, I told some friends about my plans to build this site. I pitch them a future where I routinely braindump here
 
 Upon hearing this, the first thing out of their mouths was always words of support and excitement. I've had others in my life tell propose this idea to me unprompted, and that group was delighted to hear my plans. Whenever one of these exchanges occurred, I'd try to take a moment to appreciate how supportive my friends are. But before I had time to reflect, there came the second thing out their mouth.
 
@@ -25,7 +25,6 @@ I was dissatisfied with the above conclusion because, in the back of my mind, I 
 
 Long before I actually built this site, I had decided that the first post would be something of a reader's guide, to contextualize my other posts. As I sat down to write this, I realized I could no longer dodge the question. Some focus time across 3 different cafes in lower Manhattan led me to an answer I'm happy with. I'm writing for my health.
 
-$$\sum_{v \in V}deg(v) = 2m$$
-
 ## Health is subjective.
 
+$$\sum_{v \in V} deg(v) = 2m \in \mathcal{O}(n)$$
